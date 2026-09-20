@@ -1,0 +1,42 @@
+/**:
+  ros__parameters:
+    # 输入话题（相对命名空间）
+    lio_odom_topic: "aft_mapped_to_init"
+    reloc_status_topic: "relocalization_status"
+    wheel_odom_topic: ""            # 实车可填轮式里程计话题，仿真留空
+
+    # 坐标系
+    map_frame: "map"
+    odom_frame: "odom"
+    base_frame: "base_footprint"
+
+    # 重定位服务（GICP 的触发服务，绝对话题）
+    relocalize_service: "/gicp_recall"
+    enable_relocalize_trigger: true
+    relocalize_retry_period: 10.0
+
+    # 检查周期
+    check_period: 0.2
+
+    # LIO 健康阈值
+    lio_min_rate: 5.0               # Hz
+    lio_timeout: 0.5                # s
+    lio_max_jump_trans: 1.0         # m/帧
+    lio_max_jump_yaw_deg: 30.0      # deg/帧
+
+    # 重定位健康阈值
+    reloc_status_timeout: 3.0       # s，超过视为状态过期
+    reloc_min_overlap: 0.4
+    reloc_max_normalized_score: 0.2
+
+    # map->odom 跳变阈值
+    map_odom_max_jump_trans: 0.5    # m
+    map_odom_max_jump_yaw_deg: 10.0 # deg
+
+    # 零速判定
+    zero_velocity_thresh: 0.05      # m/s
+
+    # 状态机滞回
+    degraded_enter_count: 2
+    normal_enter_count: 5
+    lost_enter_count: 3

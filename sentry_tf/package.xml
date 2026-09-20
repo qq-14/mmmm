@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>sentry_tf</name>
+  <version>0.1.0</version>
+  <description>TF 树维护、里程计与位姿输出平滑</description>
+  <maintainer email="dev@example.com">sentry team</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- TODO: 按需补充依赖，例如 rclcpp / rclpy / nav2_msgs / sensor_msgs / tf2_ros -->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
